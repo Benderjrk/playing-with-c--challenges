@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zI5OHXZnR1KCLDFqd2vGkkHJb99R5h0NwfkwWNmSNVglXjksQk18tGj+eeJCFMVw3d2MCSEC4gPtbGQnBV2Jhg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jrkbe\\OneDrive\\Desktop\\docuPhaseFinalDraft\\docuPhaseQ4\\docuPhaseQ4\\docuPhaseQ4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jrkbe\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

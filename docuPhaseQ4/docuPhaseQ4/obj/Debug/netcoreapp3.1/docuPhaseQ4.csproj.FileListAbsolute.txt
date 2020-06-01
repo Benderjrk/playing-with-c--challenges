@@ -1,0 +1,14 @@
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\obj\Debug\netcoreapp3.1\docuPhaseQ4.csprojAssemblyReference.cache
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\obj\Debug\netcoreapp3.1\docuPhaseQ4.AssemblyInfoInputs.cache
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\obj\Debug\netcoreapp3.1\docuPhaseQ4.AssemblyInfo.cs
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\obj\Debug\netcoreapp3.1\docuPhaseQ4.csproj.CoreCompileInputs.cache
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\bin\Debug\netcoreapp3.1\docuPhaseQ4.exe
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\bin\Debug\netcoreapp3.1\docuPhaseQ4.deps.json
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\bin\Debug\netcoreapp3.1\docuPhaseQ4.runtimeconfig.json
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\bin\Debug\netcoreapp3.1\docuPhaseQ4.runtimeconfig.dev.json
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\bin\Debug\netcoreapp3.1\docuPhaseQ4.dll
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\bin\Debug\netcoreapp3.1\docuPhaseQ4.pdb
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\obj\Debug\netcoreapp3.1\docuPhaseQ4.dll
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\obj\Debug\netcoreapp3.1\docuPhaseQ4.pdb
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\obj\Debug\netcoreapp3.1\docuPhaseQ4.genruntimeconfig.cache
+C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ4\docuPhaseQ4\bin\Debug\netcoreapp3.1\test.txt

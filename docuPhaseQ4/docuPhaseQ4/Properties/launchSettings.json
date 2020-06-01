@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "docuPhaseQ4": {
+      "commandName": "Project",
+      "commandLineArgs": "./test.txt"
+    }
+  }
+}
