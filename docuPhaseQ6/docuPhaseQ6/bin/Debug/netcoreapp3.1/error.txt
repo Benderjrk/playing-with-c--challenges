@@ -231,3 +231,81 @@ Stack Trace:    at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
    at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
    at DataProcessing.Program.runQueryCommand(String queryString, String connectionString) in C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ6\docuPhaseQ6\Program.cs:line 213
 ===========End============= 5/31/2020 7:37:54 PM
+=============Error Logging ===========
+Start: 5/31/2020 7:52:09 PM
+Error Message: Table 'tablename' already exists
+Stack Trace:    at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataProcessing.Program.runQueryCommand(String queryString, String connectionString) in C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ6\docuPhaseQ6\Program.cs:line 215
+===========End============= 5/31/2020 7:52:09 PM
+=============Error Logging ===========
+Start: 5/31/2020 7:52:09 PM
+Error Message: Duplicate entry 'Item1' for key 'tablename.PRIMARY'
+Stack Trace:    at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataProcessing.Program.runQueryCommand(String queryString, String connectionString) in C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ6\docuPhaseQ6\Program.cs:line 215
+===========End============= 5/31/2020 7:52:09 PM
+=============Error Logging ===========
+Start: 5/31/2020 7:52:09 PM
+Error Message: Column count doesn't match value count at row 1
+Stack Trace:    at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataProcessing.Program.runQueryCommand(String queryString, String connectionString) in C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ6\docuPhaseQ6\Program.cs:line 215
+===========End============= 5/31/2020 7:52:09 PM
+=============Error Logging ===========
+Start: 5/31/2020 7:52:09 PM
+Error Message: Column count doesn't match value count at row 1
+Stack Trace:    at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataProcessing.Program.runQueryCommand(String queryString, String connectionString) in C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ6\docuPhaseQ6\Program.cs:line 215
+===========End============= 5/31/2020 7:52:09 PM
+=============Error Logging ===========
+Start: 5/31/2020 7:52:09 PM
+Error Message: Duplicate entry 'Ttem1' for key 'tablename.PRIMARY'
+Stack Trace:    at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataProcessing.Program.runQueryCommand(String queryString, String connectionString) in C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ6\docuPhaseQ6\Program.cs:line 215
+===========End============= 5/31/2020 7:52:09 PM
+=============Error Logging ===========
+Start: 5/31/2020 7:52:09 PM
+Error Message: Column count doesn't match value count at row 1
+Stack Trace:    at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at DataProcessing.Program.runQueryCommand(String queryString, String connectionString) in C:\Users\jrkbe\OneDrive\Desktop\docuPhaseFinalDraft\docuPhaseQ6\docuPhaseQ6\Program.cs:line 215
+===========End============= 5/31/2020 7:52:09 PM

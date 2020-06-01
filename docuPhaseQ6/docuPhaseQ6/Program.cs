@@ -88,7 +88,6 @@ namespace DataProcessing
 
                 Console.Write($"\n Table Name to add: {tableTitle} \n");
                 Console.Write($"\n Table Columns to add: [{string.Join(", ", columns)}]\n");
-                Console.Write(columns.Length);
                 int columnIndex = 0;
                 foreach (string element in columnData)
                 {
