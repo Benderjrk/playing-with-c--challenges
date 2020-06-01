@@ -7,24 +7,21 @@ namespace StringManipulation
     {
         static void Main(string[] args)
         {
-            Console.Write("DocuPhase String Manipulation Engineering Code Quiz");
+            Console.Title = "DocuPhase String Manipulation Engineering Code Quiz";
             if (args.Length == 0)
             {
                 Console.WriteLine("\nPlease enter a parameter which is a filepath relative to the program.cs file. For example, \"./test.txt\" or \"../../test.txt\"\n");
                 return;
             }
-            Console.WriteLine("To start program press enter.");
+            Console.WriteLine("\nTo start program press enter.\n");
             Console.ReadLine();
 
-            /* Get path to file test.txt to get to the current working directory I had to 
-             * go up 3 directories for using visual studios docuPhaseQ1/bin/Debug/netcoreapp3.1/test.txt to access
-             * it in debugging mode. In the command line you can use the current directory
-             */
+            // Get path to file
             string pathToFile = Path.Combine(Directory.GetCurrentDirectory(), $"{args[0]}");
             string text = "";
             try
             {
-                text = System.IO.File.ReadAllText(pathToFile);
+                text = File.ReadAllText(pathToFile);
             }
             catch(Exception e)
             {
@@ -33,28 +30,28 @@ namespace StringManipulation
             Console.WriteLine($"The text string you picked was: {text}");
 
             // Replace whitespace in the string.
-            string removedWhitespace = text.Replace(" ", "");
+            string removedWhitespaceString = text.Replace(" ", "");
             // Create Final String.
             string finalString = "";
 
             // Loop through the string to check characters.
-            for (int i = 0; i < removedWhitespace.Length; i++)
+            for (int i = 0; i < removedWhitespaceString.Length; i++)
             {
                 // Is the index Before the last one
-                if (i < removedWhitespace.Length - 1)
+                if (i < removedWhitespaceString.Length - 1)
                 {
                     // is the value at index the same as the next index value
-                    if (removedWhitespace[i] != removedWhitespace[i + 1])
+                    if (removedWhitespaceString[i] != removedWhitespaceString[i + 1])
                     {
                         // add the string at index to the end of the finalString
-                        finalString += removedWhitespace[i];
+                        finalString += removedWhitespaceString[i];
                     }
                 }
                 // It the index the last one
-                else if (i == removedWhitespace.Length - 1)
+                else if (i == removedWhitespaceString.Length - 1)
                 {
                     // add the final index to the end of the finalString
-                    finalString += removedWhitespace[i];
+                    finalString += removedWhitespaceString[i];
                 }
             }
             // Print out the manipulated string
