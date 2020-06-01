@@ -5,13 +5,13 @@ using System.Collections.Generic;
 *  numbers where there are no duplicates, and
 *  the original order of the numbers is preserved.
 */
-namespace StringManipulation
+namespace NumberSequence
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("DocuPhase Ordered Number Sequence Engineering Code Quiz");
+            Console.Title = "DocuPhase Ordered Number Sequence Engineering Code Quiz";
             if (args.Length == 0)
             {
                 Console.WriteLine("\nPlease enter a parameter which is a filepath relative to the program.cs file. For example, \"./test.txt\" or \"../../test.txt\"\n");
@@ -19,11 +19,18 @@ namespace StringManipulation
             }
             Console.WriteLine("To start program press enter.");
             Console.ReadLine();
-            /* Get path to file test.txt to get to the current working directory I had to 
-            *  go up 3 directories for using visual studios docuPhaseQ4/bin/Debug/netcoreapp3.1/test.txt to access
-            *  it in debugging mode. In the command line you can use the current directory
-            */
+            // Get path to file
             string pathToFile = Path.Combine(Directory.GetCurrentDirectory(), $"{args[0]}");
+            try
+            {
+                string[] inputNumbersArray = File.ReadAllLines(pathToFile);
+                Console.WriteLine($"\nStart Array: [{string.Join(", ", inputNumbersArray)}]\n");
+            }
+            catch(Exception e)
+            {
+                Console.Write("The file could not be read: \nPlease enter a parameter which is a filepath relative to the program.cs file. \nFor example, \"./test.txt\" or \"../../test.txt\"\n");
+                return;
+            }
 
             try
             {
@@ -51,7 +58,6 @@ namespace StringManipulation
                                 // Add to end of list
                                 numberList.Add(lineInt);
                             }
-                            
                         }
                         else
                         {
@@ -60,15 +66,14 @@ namespace StringManipulation
                         }
                     }
                 }
-                Console.WriteLine($"Return Array: [{string.Join(", ", numberList.ToArray())}]");
-                Console.Write("\n");
+                Console.WriteLine($"\nReturn Array: [{string.Join(", ", numberList.ToArray())}]\n");
                 return;
             }
             catch (Exception e)
             {
-                Console.WriteLine("The file could not be read: \nPlease enter a parameter which is a filepath relative to the program.cs file. For example, \"./test.txt\" or \"../../test.txt\"\n");
+                Console.WriteLine("The file could not be read: \nPlease enter a parameter which is a filepath relative to the program.cs file. \nFor example, \"./test.txt\" or \"../../test.txt\"\n");
+                return;
             }
-
         }
     }
 }

@@ -24,7 +24,7 @@ namespace DataProcessing
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Data Processing Engineering Code Quiz");
+            Console.Title = "Data Processing Engineering Code Quiz";
             if (args.Length == 0)
             {
                 Console.WriteLine("\nPlease enter a parameter which is a filepath relative to the program.cs file. For example, \"./test.txt\" or \"../../test.txt\"\n");
@@ -44,6 +44,7 @@ namespace DataProcessing
             List<string> columnData = new List<string>();
             // To setup the insert query later on will collect the column names in the loop to get column data.
             string insertQueryColumnSetup = "";
+            string connectionString = "";
 
             /*
             * This Try block is to take in that file data and sort them into:
@@ -85,22 +86,22 @@ namespace DataProcessing
                     }
                 }
 
-                // Console.Write($"\n Table Name to add: {tableTitle} \n");
-                // Console.Write($"\n Table Columns to add: [{string.Join(", ", columns)}]\n");
-                // Console.Write(columns.Length);
-                // int columnIndex = 0;
-                // foreach (string element in columnData)
-                // {
-                //     Console.Write($"\n Data Column {columnIndex}  to add: {element} \n");
-                //     columnIndex++;
-                // }     
+                Console.Write($"\n Table Name to add: {tableTitle} \n");
+                Console.Write($"\n Table Columns to add: [{string.Join(", ", columns)}]\n");
+                Console.Write(columns.Length);
+                int columnIndex = 0;
+                foreach (string element in columnData)
+                {
+                    Console.Write($"\n Data Column {columnIndex}  to add: {element} \n");
+                    columnIndex++;
+                }     
             }
             catch (Exception e)
             {
                 Console.WriteLine("The file could not be read: \nPlease enter a parameter which is a filepath relative to the program.cs file. For example, \"./test.txt\" or \"../../test.txt\"\n");
+                return;
             }
             
-            string connectionString = "";
             /*
             * This Try block is to setup the MySQL config file from App.config:
             */
@@ -112,11 +113,26 @@ namespace DataProcessing
             {
                 ErrorLogging(e);
                 Console.Write("connectionString Failing\n\n\n");
+                return;
             }
 
             /*
             * Adding the data from the file to the actual database
             */
+            try
+            {
+                setupAndRunTableTitleColumnQuery(tableTitle, insertQueryColumnSetup, connectionString, columns);
+                setupAndRunColumnDataQuery(tableTitle, insertQueryColumnSetup, connectionString, columnData);
+            }
+            catch (Exception e)
+            {
+                ErrorLogging(e);
+            }
+
+            
+        }
+        private static void setupAndRunTableTitleColumnQuery(string tableTitle, string insertQueryColumnSetup, string connectionString, string[] columns)
+        {
             try
             {
                 // Make the query string by looping through the columns to get the exact column amount 
@@ -125,12 +141,13 @@ namespace DataProcessing
                 bool isFirstColumn = true;
                 foreach (string col in columns)
                 {
-                    if(isFirstColumn == true) {
+                    if (isFirstColumn == true)
+                    {
                         isFirstColumn = false;
                         string columnQuery = $"`{col}` VARCHAR(20) UNIQUE";
                         tableCreateQueryEnd = $",PRIMARY KEY (`{col}`));";
                         tableCreateQueryStart += columnQuery;
-                        
+
                         // Creating a query list of the columns to use in inserting the data into them later on 
                         string addingToInsertQuery = $"`{col}`";
                         insertQueryColumnSetup += addingToInsertQuery;
@@ -143,22 +160,31 @@ namespace DataProcessing
                         // Creating a query list of the columns to use in inserting the data into them later on 
                         string addingToInsertQuery = $",`{col}`";
                         insertQueryColumnSetup += addingToInsertQuery;
-                    } 
-                } 
+                    }
+                }
                 string tableCreateQueryFull = tableCreateQueryStart + tableCreateQueryEnd;
                 // Run the query to make the table with the columns
                 runQueryCommand(tableCreateQueryFull, connectionString);
-                // Add data to columns
+            }
+            catch (Exception e)
+            {
+                ErrorLogging(e);
+            }
+        }
+        private static void setupAndRunColumnDataQuery(string tableTitle, string insertQueryColumnSetup, string connectionString, List<string> columnData)
+        {
+            try
+            {
                 foreach (string items in columnData) // Loop through List with foreach
-                {   
-                    
+                {
+
                     string middleQuery = ") VALUES (";
                     string endQuery = ");";
                     string[] itemsList = items.Split(", ");
                     bool firstInLoop = true;
                     foreach (string item in itemsList) // Loop through List with foreach
                     {
-                        if(firstInLoop == true)
+                        if (firstInLoop == true)
                         {
                             firstInLoop = false;
                             middleQuery += $"'{item}'";
@@ -177,8 +203,6 @@ namespace DataProcessing
             {
                 ErrorLogging(e);
             }
-
-            
         }
         private static void runQueryCommand(string queryString, string connectionString)
         {
@@ -204,7 +228,6 @@ namespace DataProcessing
             try
             {
                 string errorFile = Path.Combine(Directory.GetCurrentDirectory(), "./error.txt");
-                Console.WriteLine(File.Exists(errorFile));
                 if (!File.Exists(errorFile))
                 {
                     File.Create(errorFile).Dispose();
@@ -212,12 +235,13 @@ namespace DataProcessing
                 using (StreamWriter sw = File.AppendText(errorFile))
                 {
                     sw.WriteLine("=============Error Logging ===========");
-                    sw.WriteLine("===========Start============= " + DateTime.Now);
+                    sw.WriteLine("Start: " + DateTime.Now);
                     sw.WriteLine("Error Message: " + ex.Message);
                     sw.WriteLine("Stack Trace: " + ex.StackTrace);
                     sw.WriteLine("===========End============= " + DateTime.Now);
 
                 }
+                Console.Write("\nError logged to error.txt\n");
             }
             catch  (Exception e)
             {
